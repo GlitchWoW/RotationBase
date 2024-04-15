@@ -44,6 +44,14 @@ function api_functions.spellIsKnown(spellID)
     return false
 end
 
+function api_functions.hasTalentEntry(talentEntryID)
+    return false
+end
+
+function api_functions.getTalentEntryRank(talentEntryID)
+    return 0
+end
+
 function api_functions.hasTalent(talentID)
     return false
 end
@@ -56,6 +64,10 @@ function api_functions.petAttack()
     return false
 end
 
+function api_functions.petCastSpellOnTarget(spellID,unitGuid)
+    return false
+end
+
 function api_functions.canCast(spellID)
     return false
 end
@@ -65,6 +77,34 @@ function api_functions.canCastCharge(spellID,maxCharge)
 end
 
 function api_functions.objectIsOnCooldown(objectID)
+    return false
+end
+
+function api_functions.canCastObject(objectID)
+    return false
+end
+
+function api_functions.getTrinketID1()
+    return 0
+end
+
+function api_functions.getTrinketID2()
+    return 0
+end
+
+function api_functions.getWeaponID()
+    return 0
+end
+
+function api_functions.getWeapon2ID()
+    return 0
+end
+
+function api_functions.isTwoHandWeapon()
+    return false
+end
+
+function api_functions.stopCast()
     return false
 end
 
@@ -92,6 +132,10 @@ function api_functions.castSpellOnPartyMember(spellID,target)
     return false
 end
 
+function api_functions.castSpellOnFocus(spellID,target)
+    return false
+end
+
 function api_functions.castAOESpellOnTarget(spellID,target)
     return false
 end
@@ -109,7 +153,7 @@ function api_functions.getUnitCountInRangeFromUnit(unitGuid,range,checkPlayer)
 end
 
 function api_functions.currentPlayerHasAura(spellID,isLocalPlayerSource)
-    return 0
+    return true
 end
 
 function api_functions.currentPlayerAuraRemainingTime(spellID,isLocalPlayerSource)
@@ -136,6 +180,10 @@ function api_functions.unitMaxHealth(unitGuid)
     return 0
 end
 
+function api_functions.getMissileCount(spellID)
+    return 0
+end
+
 function api_functions.unitAuraRemainingTime(unitGuid,spellID,isLocalPlayerSource)
     return 0
 end
@@ -144,8 +192,24 @@ function api_functions.unitAuraElapsedTime(unitGuid,spellID,isLocalPlayerSource)
     return 0
 end
 
+function api_functions.unitAuraStartTime(unitGuid,spellID,isLocalPlayerSource)
+    return 0
+end
+
+function api_functions.unitAuraEndTime(unitGuid,spellID,isLocalPlayerSource)
+    return 0
+end
+
 function api_functions.unitIsRole(unitGuid,roleName)
     return false
+end
+
+function api_functions.unitIsMoving(unitGuid)
+    return false
+end
+
+function api_functions.unitLevel(unitGuid)
+    return 0
 end
 
 function api_functions.getUnitRole(unitGuid)
@@ -260,6 +324,10 @@ function api_functions.getUnits()
     return {}
 end
 
+function api_functions.getHostileUnits()
+    return {}
+end
+
 function api_functions.getPartySize()
     return 0
 end
@@ -294,6 +362,14 @@ end
 
 function api_functions.totemExist(iconId)
     return false
+end
+
+function api_functions.totemRemainingTime(iconId)
+    return 0
+end
+
+function api_functions.totemStartTime(iconId)
+    return 0
 end
 
 function api_functions.distanceBetweenUnits(unitGuid1,unitGuid2)
@@ -391,5 +467,54 @@ end
 function api_functions.castOptimizedAOE(spellID,range,radius,isDPS,checkHostile,includeNeutral,useHealthThreshold,healthPercentThreshold)
     return false
 end
+
+function api_functions.countUnitInCone(range,angle,isDPS,checkHostile,includeNeutral)
+    return 0
+end
+
+function api_functions.castOptimizedAOEFromUnitList(spellID,radius,unitArray)
+    return 0
+end
+
+function api_functions.canCastOptimizedAOEFromUnitList(spellID,radius,unitArray)
+    return 0
+end
+
+function api_functions.countOptimizedAOETargetFromUnitList(spellID,radius,unitArray)
+    return 0
+end
+
+function api_functions.unitIsBoss(unitGuid)
+    return false
+end
+
+function api_functions.setTarget(unitGuid)
+    return false
+end
+
+function api_functions.getRuneCount()
+    return 0
+end
+
+function api_functions.isRuneReady(runeIndex)
+    return false
+end
+
+function api_functions.getCrit()
+    return 0
+end
+
+function api_functions.getVers()
+    return 0
+end
+
+function api_functions.getMastery()
+    return 0
+end
+
+function api_functions.getHaste()
+    return 0
+end
+
 
 return api_functions
